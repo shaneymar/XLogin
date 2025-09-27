@@ -3,21 +3,28 @@ import './App.css'
 
 function App() {
   
-  const [message, setMessage] = useState('');
+   const [error, setError] = useState("");        
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [userName, setUserName] = useState('');
   const [ password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
 
     e.preventDefault();
+    setError(""); 
+    setIsSubmitted(false); 
 
-  
+
+    if(!userName || !password){
+      setError("Both fields are required");
+      return;
+    }
 
     if(userName === 'user' && password === 'password'){
-      setMessage('Welcome, user!')
+       setIsSubmitted(true);
     }
     else{
-      setMessage('Invalid username or password')
+      setError('Invalid username or password')
     }
   }
   return (
@@ -47,7 +54,9 @@ function App() {
       <button type='submit'>Submit</button>
       </form>
 
-      {message && <p>{message} </p>}
+      
+      {isSubmitted && <p>Welcome, user!</p>}
+      {error && <p>{error}</p>}
     </div>
   )
 }
