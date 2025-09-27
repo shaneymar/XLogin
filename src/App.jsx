@@ -28,6 +28,7 @@ function App() {
         <input type='text' 
         placeholder='username'
         value={userName}
+        id="username"
         required
         onChange={(e) => setUserName(e.target.value)}
         />
@@ -37,6 +38,7 @@ function App() {
         <label htmlFor='password'>Password:</label>
         <input type='password' 
         placeholder='password'
+        id="password"
         value={password}
         required
         onChange={(e) => setPassword(e.target.value)}
