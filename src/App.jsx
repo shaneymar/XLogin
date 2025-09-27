@@ -22,6 +22,7 @@ function App() {
   }
   return (
     <div>
+      <h1>Login Page</h1>
       <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor='username'>UserName:</label>
