@@ -26,7 +26,6 @@ function App() {
       <div>
         <label htmlFor='username'>UserName:</label>
         <input type='text' 
-        placeholder='username'
         value={userName}
         id="username"
         required
@@ -37,7 +36,6 @@ function App() {
       <div>
         <label htmlFor='password'>Password:</label>
         <input type='password' 
-        placeholder='password'
         id="password"
         value={password}
         required
